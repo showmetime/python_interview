@@ -1,0 +1,187 @@
+git使用步骤：
+1、安装git
+2、在idea中的settings中配置git
+3、在VCS菜单下，选择git这个版本管理工具
+4、右键选择项目，点击git菜单后的：add
+5、再选择commit提交项目
+6、再设置remotes为你的git的地址。
+7、选择push向上推送项目。
+在使用过程中，出现了拒绝访问的错误信息，解决办法：  git 的操作和linux有点相同  
+① git pull origin master --allow-unrelated-histories
+② git config --global http.postBuffer 524288000
+
+下载项目：
+在任意位置右键选择git bash here进行git的命令窗口。
+① git init
+② git clone  你要下载的项目的仓库位置
+
+
+第一次提交时：   							
+1 git  init 									// 初始化 其实还有你的名字什么 我第一次已经配置了
+2 git config --global http.postBuffer 524288000 // 配置 最多提交500M
+3 git add .  									// 收集当前文件下的所有内容  .是当前目录下的所有分支 单个的就直接写文件 
+4 git remote  add origin 仓库的地址 			// git 上添加远程连接 即 你仓库的地址
+5 git push -u origin master 					// 推送到master 即主分支上去
+
+新增内容 提交的方式为：
+1 git add . 
+2 git commit -m "say what u what say"     		// 文件名可以直接写在后面 
+3 git push -u origin master
+
+、、还有一种强制push 的方法：
+git push -u origin master -f
+
+git pull origin master 本地分支可以跟远程分支进行跟踪（tracking），在pull的时候会自动合并ed
+
+
+1 git branch -v  		// 查看 当前git上一共有多少个分支 
+2 git branch hot_fix    // 创建新的分支  这里hot_fix 是热修复 服务器还在运行时创建的 分支 修改好之后 可以直接合并
+3 git checkout hot_fix  // 切换到hot_fix分支上
+
+4 如果要合并分支 
+（1） 必须切换到接收修改的分支上（被合并，增加了新内容）
+（2） 执行 git  merge 操作
+git merge hot_fix     	//	指定与哪个分支合并
+
+合并分支产出的冲突 当两个分支一样时 都是同一个文件 指针都是一样的 如果同时改了两个分支的同一文件的同一位置时再 
+进行合并时 git不知道如何选择
+1 进入文件 vim 将标记的两个冲突 该删除的删除  修改好之后 退出  
+2 git add  这个文件名
+3 git status    			// 查看文件的状态  这时合并了 但是任然处于合并状态
+4 git commit -m "日志内容"
+
+https://pan.baidu.com/s/1Sl-NW7pnk0qZyKjGHLa9kw#list/path=%2F&parentPath=%2Fsharelink4124875564-710896954083241    6qqn
+
+三 综述
+有三个区域  
+工作区 ： 写代码的地方  暂存区：临时存储的   本地库：历史版本提交在这里
+git add 提交到暂存区 git  commit 提交到本地库
+注意：对于新建文件 必须先git add  但是对于已经add过的文件进行修改 有两种方式
+1 可以使用git add 到暂存区 再git commmit 到本地库  git push -u origin master 提交到远程库
+2 直接使用git commit -m [文件名] 这时无法修改了 因为已经到本地库了 它是不能修改的  而暂存区可以使用git rm --cached 文件名撤销 
+
+0 git status 查看状态 
+1 git add 文件名 追踪 包含到将被提交的地方 包括新建和修改   //可以使用 git rm --cached 文件名  从暂存区移除 
+2 git commit -m "日志" 文件名				 // 提交
+
+
+3 git log 									 //完整的历史记录
+4 git log  --pretty=oneline 				//只显示一行
+5 git log  --oneline						//对于hash值 只取前面的一部分   它只显示当前版本的以前版本  最好还是用reflog
+5 git reflog 								// 版本部分hash值 + 显示着你要到前面哪个版本 需要移动几步
+
+基于索引值的方式后退版本库
+6 git reset --hard  版本hash值				//指定后退到那个版本 hash值就是5 步 版本的那个部分hash值
+^这个只能后退不能前进 退几步就写几个^
+7 git reset --hard HEAD^^^ 					//从当前版本后退了三步
+8 git reset --hard HEAD~3 					//这个更好 直接~3 也是后退三步  它们两个都是只能后退
+
+
+git reset hard/soft/mixed 
+reset 三个参数对比：
+--soft  仅仅在本地仓库移动HEAD指针
+--mixed  会在本地库移动hard指针，重置暂存区 
+--hard  在本地库移动HEAD指针 重置暂存区 重置工作区
+
+s删除文件并找回：
+git reset --hard  [那个版本的hash值]
+
+git 以行为单位进行管理的 如果在哪一行添加了元素 相当于将原来那一行删除 重新添加了一行
+
+git diff [文件名] 将工作区的文件和暂存区进行比较
+git diff [本地库历史版本]  [文件名]   将工作区的文件和历史记录比较
+
+创建别名 
+git remote -v 
+git remote add origin 你的仓库地址
+
+git remote -v  就可以查看了 fetch  取回 push 推送
+
+
+
+.gitignore文件加上：
+.dea/workspace.xml
+可是.gitignore文件生效的时机是在git add，我们的文件已经提交到了远端的话，.gitignore是不生效的。
+
+
+文件不一致
+git rm --cached file
+执行git rm --cached file先将远端的文件删除，然后在
+
+git add .                  git commit -m              git pull 
+恢复文件
+删除.gitignore中添加的内容，就能重新提交。
+
+拓展：三个删除：
+rm
+普通删除
+
+git rm
+删除本地、暂存区、分支上内容
+
+git rm file = rm file+ git add file
+rm file删除本地文件
+git add file 提交删除的步骤同步到git仓库
+
+1 别人推送过来必须有这个权限 先setting  在collaborators  输入这个人的github账号  复制生成的连接 给这个人
+2 点击接受 就ok  就变成团队成员 就可以执行推送了  
+3 有相关权限了  window10 记住密码了 在凭证管理器里面  换号可以将之前的这个删除掉
+
+git  fetch  origin master  远程库别名   只是下载到本地 。
+git merge origin/master  远程库地址别名/远程库别名   就将其与本地库的合并了 
+
+
+************************************************************************
+下面的不一定对！！！！！！！！！！！！！！！！  注意 要是远程库的最新版才能推送！！！！！！！！！！！！！！！！！！否则要pull
+实际上git pull是分了两步走的，（1）从远程pull下origin/master分支（2）将远程的origin/master分支与本地master分支进行合并
+3.解决方法
+方法一：如果我们确定远程的分支正好是我们需要的，而本地的分支上的修改比较陈旧或者不正确，那么可以直接丢弃本地分支内容，
+运行如下命令(看需要决定是否需要运行git fetch取得远程分支)：
+$:git reset --hard origin/master
+或者$:git reset --hard ORIG_HEAD
+解释：
+?git-reset - Reset current HEAD to the specified state
+--hard
+? ? ? ? ? ? ? ?Resets the index and working tree. Any changes to tracked files
+? ? ? ? ? ? ? ?in the working tree since <commit> are discarded.
+方法二：我们不能丢弃本地修改，因为其中的某些内容的确是我们需要的，此时需要对unmerged的文件进行手动修改，删掉其中冲突的部分，然后运行如下命令
+1 先把文件修改了 和一般的问件修改一样
+2 $:git add filename
+3 $:git commit -m "message"
+4 $:git push -u/或没有 origin master 
+方法三：如果我们觉得合并以后的文件内容比价混乱，想要废弃这次合并，回到合并之前的状态，那么可以运行如下命令：
+$:git reset --hard HEAD
+**************************************************************************
+
+团队协作 
+一、开发者： 
+1 以自己身份点击fork
+2 推送到远程 pull request 发起请求
+3 点击new request  他会列出所做的修改
+4 发消息给仓库创建者 点击create pull request   就完成了
+
+二、仓库管理员
+1 点击 pullrequest 
+2 点击消息 弹出对话框 可以与开发者进行对话
+3 也可以点击commit 看做了哪些提交 fileschange做了哪些改变 对代码进行审核
+4 可以的话点击merge pull  request 进行合并代码   可以添加相关信息  相当于日志
+5 在点击confirm merge 确认合并
+
+一、配置上游项目地址。即将你 fork 的项目的地址给配置到自己的项目上。
+比如我 fork 了一个项目，原项目是 wabish/fork-demo.git，我的项目就是 cobish/fork-demo.git。使用以下命令来配置。
+? git remote add upstream https://github.com/wabish/fork-demo.git
+然后可以查看一下配置状况，很好，上游项目的地址已经被加进来了。? git remote -v
+origin  git@github.com:cobish/fork-demo.git (fetch)
+origin  git@github.com:cobish/fork-demo.git (push)
+upstream    https://github.com/wabish/fork-demo.git (fetch)
+upstream    https://github.com/wabish/fork-demo.git (push)
+
+二、获取上游项目更新。使用 fetch 命令更新，fetch 后会被存储在一个本地分支 upstream/master 上。
+? git fetch upstream
+
+三、合并到本地分支。切换到 master 分支，合并 upstream/master 分支。
+? git merge upstream/master
+
+4、提交推送。根据自己情况提交推送自己项目的代码。
+? git push origin master
+
