@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <style>
+        .table{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div class="panel panel-primary">
+                <div class="page-header">
+                    <div class="panel-title">
+                        <h3>学生信息列表</h3>
+                    </div>
+                </div>
+                <table class="table">
+                    <tr>
+                        <td>学号</td>
+                        <td>姓名</td>
+                        <td>年龄</td>
+                        <td>住址</td>
+                    </tr>
+                    <tr v-for="student in students">
+                        <td>{{student.sid}}</td>
+                        <td>{{student.sname}}</td>
+                        <td>{{student.age}}</td>
+                        <td>{{student.add}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    // 定义一个实例
+    let vs = new Vue({
+        el:'.container',
+        data:{
+            students:[]
+        },
+        mounted(){
+            // 安装
+            this.findAllStudents();
+        },
+        methods:{
+            findAllStudents(){
+                let t = this;
+                axios.get("http://localhost:63342/vue_demo/vue_02/students.json")
+                    .then(function (response) {
+                        t.students = response.data;
+
+                    })
+             }
+        }
+
+
+
+
+    })
+</script>

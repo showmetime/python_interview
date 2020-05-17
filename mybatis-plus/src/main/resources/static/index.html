@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-springboot实战</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>学生管理系统</h2>
+        </div>
+        <!--{{ids}}-->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <!--看你和上面的区别在哪里 -->
+                <div class="panel-title">
+                    <h3>学生列表</h3>
+                </div>
+            </div>
+            <div class="panel panel-body">
+                <table class="table table-hover table-bordered table-striped text-center">
+                    <tr>
+                        <td colspan="7">
+                            <form action="" class="form-inline">
+                                姓名:<input type="text" class="form-control" v-model="entity.stuname" placeholder="输入要查询名字">
+                                &nbsp;&nbsp;性别:<input type="text" class="form-control" v-model="entity.uusex" placeholder="输入要查询的性别">
+                                <select v-model="entity.rid" class="form-control">
+                                    <option value=0>所有角色</option>
+                                    <option v-for="role in roles" :value="role.rid">{{role.rname}}</option>
+                                </select>
+                                <input type="button" value="查询" class="btn btn-info btn-group-lg" @click="searchByPage1()">
+                                <!--你这个搜索 每次要把页面清空一下才行-->
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>选择</td>
+                        <td>编号</td>
+                        <td>姓名</td>
+                        <td>年龄</td>
+                        <td>性别</td>
+                        <td>角色</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr v-for="student in results.records">
+                        <td>
+                            <input type="checkbox" :value="student.stuid" v-model="ids">
+                        </td>
+                        <td>{{student.stuid}}</td>
+                        <td>{{student.stuname}}</td>
+                        <td>{{student.stuage}}</td>
+                        <td>{{student.uusex}}</td>
+                        <td>{{student.roles.rname}}</td>
+                        <td>
+                            <a href="#" class="btn btn-info btn-sm" @click="updateUi(student)">修改</a>
+                        </td>
+                    </tr>
+                    <!--分页-->
+                    <tr>
+                        <td colspan="7">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <!--这个li标签添加了循环 这个是设置样式 先别管他-->
+                                    <!--<li v-for="p in results.pages" :class="page = p ? 'active' :'' ">-->
+                                    <li v-for="p in results.pages">
+                                        <a href="#" @click="skipPage(p)" >{{p}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                    </tr>
+                        </td>
+
+                </table>
+
+            </div>
+
+            <div class="panel-footer text-right">
+                <input type="button" value="添加学生" class="btn btn-success" @click="addStu()">
+                <input type="button" value="批量删除" class="btn btn-danger" @click="delStu(ids)">
+                <br>
+                xxx小学管理系统
+            </div>
+
+        </div>
+
+        <!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">修改 可以直接放那里去 但是没法传学生id过来</button>-->
+        <!-- 模态框（Modal） 一开始没把模态框包在container里面 他妈的错了好久好久。。。。。。 -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">修改/添加学生信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="form1">
+                            <input type="hidden" name="stuid" id="stuid">
+                            <!--这个-->
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">学生姓名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="studentEntity.stuname" id="stuname" class="form-control" placeholder="姓名">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">学生年龄</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="studentEntity.stuage" name="stuage" class="form-control" placeholder="年龄">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">性别</label>
+                                <div class="col-sm-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio" v-model="studentEntity.uusex" value="男">男
+                                            <!--马拉个币的必须要name一样才行 但是他妈的别人的不用也可以 操-->
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="radio" v-model="studentEntity.uusex" value="女" >女
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--注意 这里应该是个下拉框可以选择好几个角色-->
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">扮演角色</label>
+                                <div class="col-sm-10">
+                                    <select v-model="studentEntity.rid" id="rid" class="form-control">
+                                        <option value="0">所有角色</option>
+                                        <option v-for="c in roles" :value="c.rid">
+                                            <span>{{c.rname}}</span>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" @click="save()">提交更改</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // <!--现在是创建一个实例-->
+    let vue = new Vue({
+        el:".container", //注意哦 这个容器时class 等于container里面的
+        // 这个data相当于anglarjs 给对象赋予初始值
+        data:{
+            students:[],
+            roles:[],
+            studentEntity:{},
+            ids:[],
+            entity:{},
+            results:{"total":10,"records":[],"pages":5}, // 这个应该是初始化 没什么用 total是总记录数 pages是总页数
+            page:1,
+            pageSize:3
+        //  这个要绑定的 必须在初始化的时候 定义
+        },
+        // 等html模板渲染完了 就用这个钩子函数显示所有学生和所有角色 相当于一开始就要加载的函数
+        mounted(){
+            // this.findAllStudents();
+            this.searchByPage(this.page,this.pageSize,this.entity);
+            // 所有的角色
+            this.findAllRoles();
+
+        },
+
+        // 然后是真正的方法了
+        methods:{
+            // findAllStudents(){
+            //     axios.get("student/findAll").then(response=>{
+            //         this.students = response.data;
+            //     })
+            // },
+            // findAllStudentsPage(page,pageSize){
+            //     axios.get("student/findAllPage?page=" + page + "&pageSize=" + pageSize).then(response=>{
+            //         this.results = response.data;
+            //     });
+            // },
+            // 搜索方法
+            // search(){
+            //     axios.post("student/search",this.entity).then(response=>{
+            //         this.students = response.data;
+            //     })
+            // },
+            // 调到某一页上面去  对 这个应该是使用可能有参数的查询
+            findAllRoles(){
+                axios.get("roles/findAll").then(response=>{
+                    this.roles = response.data;
+                })
+            },
+            // 修改学生 也就是弹出模态框
+            updateUi(student){
+                $(".modal").modal("show");
+                this.studentEntity = student;
+            },
+            // 添加学生 也就是模态框弹出来 并将entity清空
+            addStu(){
+                this.studentEntity = {};
+                $(".modal").modal("show");
+            },
+            // 保存 修改 和 添加都是一样的  除了查询都是post好了
+            save(){
+                let url = "student/add";
+                if(vue.studentEntity.stuid){
+                    // 如果有这个id 那就是修改了 这是根据下面的修改的赋值得到的stuid的
+                    url = "student/update";
+                }
+                axios.post(url,vue.studentEntity).then(response=>{
+                    if(response.data.success){
+                        this.entity={};
+                        this.searchByPage1();
+                        // 你也应该是将重最开始开始 如果是添加的话
+
+                        // 如果成功了又找一遍
+                    }else{
+                        alert(response.data.message);
+                    }
+                    $(".modal").modal("hide");
+
+
+                });
+                // 然后关闭模态框
+
+            },
+            // 删除 这个axios的删除 并不是restful风格 没有delete 还是用的get方法
+            delStu(){
+                axios.get("student/delete?ids="+vue.ids).then(response=>{
+                        if(response.data.success){
+                            this.findAllStudents();
+                            // 删除成功 重新加载
+                        }else{
+                            alert(response.data.message);
+                        }
+                })
+            },
+
+            skipPage(p){
+                this.page = p;
+                this.searchByPage(); //操这个还要写上this
+            },
+            searchByPage1(){
+                this.page = 1;
+                this.pageSize = 3;
+                // 这个是专门进行跳转的搜索页面；
+                axios.post("student/searchPage?page=" + this.page + "&pageSize=" + this.pageSize,this.entity).then(response=>{
+                    // alert(this.page +":"+ this.pageSize +":" +this.entity.rid);
+                    this.results = response.data;
+                    // alert("哈哈");
+                });
+            },
+            // 带分页的搜索  全部直接在这一个就行了
+            searchByPage(){
+                // 应该给两个一样的函数 这个不清空page ,另一个要清空页面
+                axios.post("student/searchPage?page=" + this.page + "&pageSize=" + this.pageSize,this.entity).then(response=>{
+                    // alert(this.page +":"+ this.pageSize +":" +this.entity.rid);
+                    this.results = response.data;
+
+                });
+            }
+        }
+    })
+
+</script>

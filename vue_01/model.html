@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+    <div id="id">
+        <!--即 将这个模块和language绑定-->
+        <input type="checkbox" v-model="language" value="java" > java<br>
+        <input type="checkbox" v-model="language" value="python" > python<br>
+        <input type="checkbox" v-model="language" value="c"> c<br>
+        <input type="checkbox" v-model="language" value="php"> php<br>
+        <h>你喜欢的语言是：{{language.join(",")}}</h>
+    </div>
+
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:"#id",
+        data:{
+            language:[]
+        }
+    })
+</script>

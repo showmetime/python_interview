@@ -1,0 +1,25 @@
+server:
+  port: 9100
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///employees?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+  banner:
+    location: banner/banner.txt
+logging:
+  config: classpath:log4j2-spring.xml
+  level:
+    root: trace
+    #操他妈的 还真是这里要加一个root
+
+#        naming:
+#          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#           这个是无修改命名
+#          implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+#           这个是遇到大些字母添加'_'

@@ -1,0 +1,10 @@
+### Dev Setting
+spring:
+  profiles: dev
+
+server:
+  port: 8080
+
+app:
+  title:
+    name: dev name

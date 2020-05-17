@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钩子函数</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="id">
+        {{hello}}
+    </div>
+
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:"#id",
+        data:{
+            hello:"ahha" // hello初始化为空
+        },
+        // created()会将data里面的函数覆盖掉
+        created(){
+            this.hello = "hello,word!我出生了";
+            console.log(this);
+        }
+    })
+</script>

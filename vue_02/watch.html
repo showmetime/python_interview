@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue之watch的用法</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="id">
+        <input type="text" v-model="msg">
+        <!--这里还都是一样的-->
+    </div>
+
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#id",
+        data:{
+            msg:""
+        },
+        watch:{
+        //  现在开始监听data里面的msg的每一次改变
+            msg(newVal,oldVal){
+                console.log(newVal,oldVal);
+            }
+        }
+        // anglarjs里面的watch事件为 $watch其实也一样 监听变了就去改变那个值
+        // $scope.$watch("entity.goods.category1Id", function (newValue, oldValue)
+    })
+</script>

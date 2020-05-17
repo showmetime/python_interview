@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的循环用法 v-for</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                学生列表
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped table-hover table-bordered">
+                <tr>
+                    <td>选项</td>
+                    <td>次序</td>
+                    <td>编号</td>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年龄</td>
+                </tr>
+                <tr v-for="student,index in students">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>{{index}}</td>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.sex}}</td>
+                    <td>{{student.age}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel-footer text-right">
+            今天天气很好，goog morning！
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:".table",
+        data:{
+            students:[{"id":100,"name":"张三","sex":"男","age":18},
+                      {"id":101,"name":"李四","sex":"男","age":20},
+                      {"id":102,"name":"小微","sex":"女","age":25},
+                      {"id":103,"name":"小可","sex":"女","age":26}]
+        }
+    })
+</script>

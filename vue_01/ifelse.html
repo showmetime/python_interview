@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue判断v-if,v-else</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<!--v-if布尔表达式-->
+    <div  id="id">
+        <div v-if="text > 0.5">
+        这个值大于0.5
+        <br>
+        </div>
+        <div v-else>
+            这个值小于0.5
+        </div>
+        <button v-on:click="show =!show">点击切换</button>
+        <h1  v-if="show">hello</h1>
+        <hr>
+        <div v-show="show1">
+            show1,hello!
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    /**
+     * 小结：1 v-if 是显示层（变量为true)或不显示层即变量为false
+     *       2 v-show 如果变量为false，则只是将层的display属性改为了none，其实标签还是会输出的
+     * */
+
+    let vue = new Vue({
+        el:"#id",
+        data:{
+            text:0.1,
+            show:false,
+            show1:false
+        }
+    })
+</script>

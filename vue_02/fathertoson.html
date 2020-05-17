@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="id">
+        <hr>
+        父组件向子组件传值(这个是父组件 简单类型)
+        <define1 title="通过这个title向子组件传值"></define1>
+    </div>
+    <div id="id1">
+        <hr>
+        父组件向子组件传值(复杂类型)
+        <define2 :lists="language"></define2>
+        <define3 :lists1="language"></define3>
+        <!--language 是实例 lists是v-model与language绑定-->
+    </div>
+
+
+</body>
+</html>
+<script>
+    // 定义一个全局组件
+    Vue.component("define1",{
+        template:"<h3 style='color: red'>{{title}}</h3>",
+        props:["title"]
+        // title 就是属性
+    })
+    // 定义一个实例
+    new Vue({
+        el:"#id"
+    })
+
+    // 复杂类型 定义一个局部组件 先看组件
+    const define2 = {
+        // 主要是看这个模板怎么渲染的
+        template:`
+            <ul>
+                <li style="color: red" v-for="list in lists" :key="list.id">{{list.name}}</li>
+            </ul>
+        `,
+        props:{
+            lists:{
+                type:Array,
+                default:[]
+                // 设初始值为空
+            }
+        }
+    }
+    // 复杂类型 定义一个局部组件(初始值为空，接着实例化vue的时候将list1赋值
+    const define3 = {
+        // 主要是看这个模板怎么渲染的
+        template:`
+            <ul>
+                <li style="color: blue" v-for="list in lists1" :key="list.id">{{list.name}}</li>
+            </ul>
+        `,
+        props:{
+            lists1:{
+                type:Array,
+                default:[]
+                // 设初始值为空
+            }
+        }
+    }
+    // 又定义一个实例  现在差不多明白了
+    // Vue.component("define1",{
+    //     template:"<h3 style='color: red'>{{title}}</h3>",
+    //     props:["title"]
+    //     // title 就是属性
+    new Vue({
+        el:"#id1",
+        components:{
+            define2
+        },
+        data:{
+            language:[
+                {"id":1000,"name":"java"},
+                {"id":1001,"name":"c++"},
+                {"id":1002,"name":"c#"},
+                {"id":1003,"name":"python"},
+            ]
+        }
+    })
+    new Vue({
+        el:"#id1",
+        components:{
+            define3
+        },
+        data:{
+            language:[
+                {"id":1000,"name":"java"},
+                {"id":1001,"name":"c++"},
+                {"id":1002,"name":"c#"},
+                {"id":1003,"name":"python"},
+            ]
+        }
+    })
+
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue之组件化</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="id">
+        <!--使用定义好的全局组件 组件复用每个组件也没有干扰-->
+        <!--原因就是在于data是一个函数，因此每一个实例维护一份被返回对象的独立的拷贝-->
+        <define1></define1>
+        <define1></define1>
+        <define1></define1>
+    </div>
+    <!--两个地方使用定义好的全局组件-->
+    <div id="id1">
+        <define1></define1>
+    </div>
+
+    <!--局部组件-->
+    <div id="id2">
+        <mycounter></mycounter> <br>
+    </div>
+    <div id="id3">
+        <mycounter></mycounter> <br>
+    </div>
+</body>
+</html>
+<script>
+    <!--注意 现在是组件定义 需要两个参数 1 组件名称 2 组件参数-->
+    Vue.component("define1",{
+        // 下面是模板
+        template:"<button @click='count++'>你点击了{{count}}次[全局组件]</button>",
+        // 注意 现在组件component的data是变量 所以采用函数形势返回 data后面是()号
+        data(){
+            return {
+                count:0
+                // 第一次是0 然后返回当前对象实际的值
+            }
+        }
+    })
+    /**
+     * 组件其实也是一个Vue实例，他也会接收data,methods，生命周期函数等 不同的组件不会与月面元素绑定
+     * 否则无法复用了 没有el属性 组件渲染需要html模板 增加了template属性 值就是HTML模板
+     * 全局组件 可以让任何vue实例使用
+     * data这时的定义变为有返回值的函数
+     */
+    new Vue({
+        el:"#id"
+    })
+    new Vue({
+        el:"#id1"
+    })
+
+    // 现在是局部组件
+    const mycounter = {
+        template:"<button @click='count++'>你点击了{{count}}次[局部组件]</button>",
+        data(){
+            return {
+                count:0
+            }
+        }
+    }
+    // 创建一个实例 在这个id2的div上引用mycounter
+    new Vue({
+        el:"#id2",
+        components:{
+            "mycounter":mycounter
+            // 后面这个mycounter对应上面 const mycounter
+        }
+        /**
+         *component是当前vue对象子组件集合
+         * key是子组件名称  value是组件对象的属性
+         * 效果与刚才全局注册类似 但是这个mycounter组件只能在当前的Vue实例中使用
+         **/
+    })
+    // new Vue({
+    //     el:"#id3",
+    //     components:{
+    //         "mycounter":mycounter
+    //         // 后面这个mycounter对应上面 const mycounter
+    //     }
+    //     /**
+    //      *component是当前vue对象子组件集合
+    //      * key是子组件名称  value是组件对象的属性
+    //      * 效果与刚才全局注册类似 但是这个mycounter组件只能在当前的Vue实例中使用
+    //      **/
+    // })
+
+
+</script>

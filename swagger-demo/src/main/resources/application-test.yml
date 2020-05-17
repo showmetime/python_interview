@@ -1,0 +1,10 @@
+## Test Setting
+spring:
+  profiles: test
+
+server:
+  port: 8081
+
+app:
+  title:
+    name: test name

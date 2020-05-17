@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue事件处理示例</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div class="id">
+        <input type="button" value="+" v-on:click="add()">{{num}}
+        <input type="button" value="-" v-on:click="minus()">
+        <!--注意: 1、这里用v-on指令绑定点击事件，而不是普通的onclick，然后在直接操作num
+                  2、普通的click是无法直接操作num的-->
+    </div>
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:".id",
+        data:{
+            num:10
+        },
+        methods:{
+            add(){
+                this.num ++;
+            },
+            minus(){
+                if(this.num > 0 ){
+                    this.num --;
+                }else{
+                    this.num = 0;
+                }
+            }
+        }
+    })
+</script>

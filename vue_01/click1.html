@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on绑定事件</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="id">
+        <button v-on:click="num++">+1</button><br/>
+        {{num}}<br>
+        <button v-on:click="decrement">-1</button><br/>
+        <!--按键修饰符 监听键盘事件 如按13时调用vm.submit()事件-->
+        <input v-on:keyup.13="submit">
+        <!--1就是确认键 即 enter 以下两个写法都是一个意思-->
+        <input v-on:keyup.enter="submit">
+        <input @keyup.enter="submit">
+        <!--还有.ctrl .alt .shift 即组合按钮 按下相应的按键时才触发鼠标或键盘事件的监听器-->
+        <!-- alt + c -->
+        <input @keyup.alt.67="clear">
+        <!-- ctrl + click-->
+
+    </div>
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:"#id",
+        data:{
+            num:10
+        },
+        methods:{
+            decrement(){
+                this.num--;
+            }
+        }
+    })
+</script>

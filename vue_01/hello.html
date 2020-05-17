@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到vue学习</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<!--它为什么要在body元素里面 而且必须包含在div块中
+ 他也可以实现数据双向绑定，写法和anglarjs完全一样-->
+    <div id="app">
+        <input type="text" v-model="msg">
+        <!--当vue实例被创建时，它会尝试获取在data中定义的所有属性用于
+        视图渲染，并监视data中属性变化，当data发送变化所有的相关的视图
+        将重新渲染，这就是响应式系统-->
+        <br>
+        {{msg}}
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            msg:"这是一个晴朗的早晨，鸽哨声伴着阵阵号声"
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,12 @@
+server:
+  port: 9000
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+  datasource:
+    url: jdbc:mysql:///test01?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false
+    username: root # 操 serverTimezone 这个zone不大写 mmp
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    # 这个版本太高 还需要你指明时间

@@ -1,0 +1,11 @@
+server:
+  port: 6868
+spring:
+  application:
+    name: eureka-test
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/

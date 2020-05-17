@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h2>字组件向父组件传值</h2>
+    <div id="id">
+        <define1 @inc="increment" @dec="decrement" v-bind:num="num"/>
+        <!--@inc是子组件的 它会触发父组件的increment函数 这是一个绑定-->
+    </div>
+
+</body>
+</html>
+<script>
+    // 定义一个全局组件
+    Vue.component("define1",{
+        template:`
+            <div>
+                <button @click="plus">+</button>
+                {{num}}
+                <button @click="reduce">-</button>
+            </div>
+        `,
+        props:['num'],
+        methods:{
+            plus(){
+                // $emit()函数可以复发父组件相关的事件
+                this.$emit("inc")
+            },
+            reduce(){
+                this.$emit("dec")
+            }
+            // 这样写好理解一些
+        }
+    })
+    // 定义一个实例 这个是父组件
+    new Vue({
+        el:"#id",
+        data:{
+            num:0
+        },
+        methods:{
+            increment(){
+                this.num++;
+            },
+            decrement(){
+                this.num--;
+                if(this.num==0){
+                    this.num=1;
+                }
+            }
+        }
+    })
+    /**
+     * 1 原理：父组件将方法的引用，传递到子组件内部，子组件在内部调用父组件传递过来的方法，
+     * 同时把要发送给父组件的数据，在调用方法的时候当作参数传递进去；
+     * 2 父组件将方法的引用传递给子组件，其中，getMsg是父组件中methods中定义的方法名称，
+     *   func是子组件调用传递过来方法时候的方法名称
+     */
+</script>

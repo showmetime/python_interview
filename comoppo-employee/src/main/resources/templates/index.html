@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职员管理系统</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../plugins/jquery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--1.引入angularjs-->
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <!--2.引入分页的js库-->
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <!--3.加载基本的模块-->
+    <script src="../controller/base_pagination.js"></script>
+    <script src="../plugins/layDate-v5.0.9/laydate/laydate.js"></script>
+    <!--4.引入baseController-->
+    <script src="../controller/baseController.js"></script>
+    <script src="../controller/employeeController.js"></script>
+    <script src="../js.service/employeeService.js"></script>
+
+</head>
+<body ng-app="employee" ng-controller="employeeController" ng-init="loadAllEmployee()">
+<!--;print()-->
+<div class="container">
+    <div class="panel">
+        <div class="header-panel">
+            <!--面板的头部-->
+            <h1>故我集团全球职员管理系统</h1>
+        </div>
+        <div class="panel-body">
+            <span>
+                开始：<input type="text" id="test1" style="height: 30px;width: 100px;">
+                结束：<input type="text" id="test2" style="height: 30px;width: 100px;">
+                姓名：<input type="text" id="test3" style="height: 30px;width: 100px;">
+                职位：<input type="text" id="test4" style="height: 30px;width: 80px;">
+                <button  class="btn btn-danger btn-lg" type="button" ng-click="search()">确认</button>
+            </span>
+
+
+            <!--现在是面板的中部-->
+            <table class="table table-hover table-bordered table-striped text-center data-type">
+                <thead>
+                    <tr style="background-color: #1E9FFF;color: white;">
+                        <td>员工编号</td>
+                        <td>员工名字</td>
+                        <td>性别</td>
+                        <td>员工生日</td>
+                        <td>入职时间</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee1 in employees">
+                        <!--{{employee1}}{{name1}}-->
+                        <td>{{employee1.empNo}}</td>
+                        <td>{{employee1.firstName}}  {{employee1.lastName}}</td>
+                        <!--这里将性别转一下-->
+                        <td>
+                            <span>
+                                {{sex[employee1.gender]}}{{employee1.gender}}
+                            </span>
+                        </td>
+                        <td>{{employee1.hireDate}}</td>
+                        <td>{{employee1.birthDate}}</td>
+                        <td class="text-center">
+                            <button type="button" ng-click="updateEmployee(employee1.empNo)" class="btn btn-success">修改</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--注意 这里进行配置说明分页的配置地方-->
+            <tm-pagination conf="paginationConf"/>
+        </div>
+        <div class="panel-footer text-right">
+            只能有管理员进入，其他人操作后果自负
+        </div>
+    </div>
+</div>
+<script>
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1' //指定元素
+    });
+    laydate.render({
+        elem: '#test2' //指定元素
+    });
+</script>
+
+</body>
+</html>

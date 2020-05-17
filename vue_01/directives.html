@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <!--directives:指令 带有v-单个javaScript表达式-->
+    <!--v-text,v-html的指令可以替代{{}}-->
+    <!--{{}}这种显示内容的方式在网速慢的情况下 会出现插值闪烁情况，此时可以使用v-text或v-html代替他-->
+
+</head>
+<body>
+    <div id="id">
+        {{msg}}-------------->vxvxvxvxvx
+        <br>
+        <span v-text="text"></span>
+        <br>
+        <span v-html="text"></span>
+    </div>
+</body>
+</html>
+<script>
+    var vue = new Vue({
+        el:"#id",
+        data:{
+            msg:"哈哈哈",
+            text:'<h1>大家好</h1>'
+        }
+    })
+</script>

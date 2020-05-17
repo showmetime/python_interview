@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue之spring-boot实战</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>学生管理系统</h2>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel panel-heading">
+                <div class="panel-title">
+                    学生列表
+                </div>
+            </div>
+            <div class="panel panel-body">
+                <table class="table text-center table-bordered table-hover table-striped">
+                    <tr>
+                        <td>选择</td>
+                        <td>编号</td>
+                        <td>姓名</td>
+                        <td>年龄</td>
+                        <td>性别</td>
+                        <td>角色</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr v-for="student in students">
+                        <td><input type="checkbox" :value="student.stuid" v-model="ids"> </td>
+                        <td>{{student.stuid}}</td>
+                        <td>{{student.stuname}}</td>
+                        <td>{{student.stuage}}</td>
+                        <td>{{student.uusex}}</td>
+                        <td>{{student.roles.rname}}</td>
+                        <td>
+                            <a href="#" type="button"  class="btn btn-info btn-lg" @click="updateStu(student)">修改
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel panel-footer text-right">
+                <button class="btn btn-success btn-lg" @click="addStu()" >添加学生</button>
+                <button class="btn btn-danger btn-lg" @click="delStu(ids)" >批量删除</button>
+                <br/>
+                <br/>
+                <span style="font-weight: bold">XXX学校后台管理中心</span>
+            </div>
+        </div>
+
+        <!--一定要把模态框放到container里面啊 否则就管不到 所以没有值 啊 记得作用域的范围啊-->
+        <!--模态框-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">添加/修改学生信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <input type="hidden" name="sid" id="sid">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">姓名：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="studentEntity.stuname" id="stuname" class="form-control" placeholder="姓名">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">学生年龄</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="studentEntity.stuage" class="form-control" name="stuage" placeholder="年龄">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">学生性别</label>
+                                <div class="col-sm-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio" v-model="studentEntity.uusex" value="男">男
+                                        </label>
+                                        <!--必须要加name="radio"-->
+                                        <label>
+                                            <input type="radio" name="radio"  v-model="studentEntity.uusex" value="女" >女
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">扮演角色</label>
+                                <div class="col-sm-10">
+                                    <select v-model="studentEntity.rid" id="rid" class="form-control">
+                                        <option value="0">所有角色</option>
+                                        <option v-for="c in roles" :value="c.rid">{{c.rname}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" @click="save()">提交更改</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+<script>
+    let vue = new Vue({
+        el:".container",
+        // 这个是初始化将要绑定的对象 相当于  必须给绑定的对象初始化
+        data:{
+            studentEntity:{},
+            students:[],
+            ids:[],
+            roles:[]
+        },
+        // 然后是模板加载之后的钩子函数mounted（） 相当于初始化方法 ng-init
+        mounted(){
+            this.findAllStudent();
+            this.findAllRoles();
+        },
+        // 现在是定义方法了
+        methods:{
+            findAllStudent(){
+                axios.get("student/findAll").then(response=>{
+                    this.students = response.data;
+                })
+            },
+            findAllRoles(){
+                axios.get("roles/findAll").then(response=>{
+                    this.roles = response.data;
+                })
+            },
+            // 修改
+            updateStu(student){
+                $("#myModal").modal("show");
+                this.studentEntity = student;
+            },
+            // 添加
+            addStu(){
+                this.studentEntity = [];
+               $("#myModal").modal("show");
+            },
+            // 保存
+            save(){
+                let url = "student/add";
+                if(vue.studentEntity.stuid){
+                    // 如果有这个id 那就是修改了 这是根据下面的修改的赋值得到的stuid的
+                    url = "student/update";
+                }
+                axios.post(url,vue.studentEntity).then(response=>{
+                    if(response.data.success){
+                        this.entity={};
+                        this.findAllStudent();
+                        // 你也应该是将重最开始开始 如果是添加的话
+
+                        // 如果成功了又找一遍
+                    }else{
+                        alert(response.data.message);
+                    }
+                    $(".modal").modal("hide");
+
+
+                });
+                // 然后关闭模态框
+            },
+            // 删除 删除不是restful风格 它 只是一般的get形式 参数带后面
+            delStu(ids){
+                axios.get("student/delete?ids=" + ids).then(response=>{
+                    // 删除完了也直接刷新
+                    if(response.data.success){
+                        this.findAllStudent();
+                    }else{
+                        alert(response.data.message);
+                    }
+                })
+            }
+        }
+
+    })
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .active{
+            color:red
+        }
+        .static{
+            text-decoration: underline;
+            color:blue
+        }
+        .aaa{
+            font-size:100px
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <h3>
+        <!--1.根据变量isActive的值是否为true,决定是有使用 active样式类。-->
+        <div v-bind:class="{active:isActive}">v-bind的用法</div>
+        <!--2.如果有多个样式的情况，原理与上面的类似-->
+        <div class="static" :class="{active:isActive,'aaa':hasError}">
+            v-bind用法二
+        </div>
+        <!--3.计算属性-->
+        <h1>您的生日是：{{
+            new Date(birthday).getFullYear() + '-'+ new Date(birthday).getMonth()+ '-' + new Date(birthday).getDate()
+            }}
+        </h1>
+        <h1>
+            你的生日是：{{birth}}
+        </h1>
+    </h3>
+
+</div>
+</body>
+</html>
+<script>
+    let vs = new Vue({
+        el:'#d1',
+        data:{
+            isActive: true,
+            hasError: false,
+            birthday: 1529032123201
+        },
+        computed:{      //计算属性的使用
+            birth(){
+                const d = new Date(this.birthday);
+                return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate();
+            }
+        }
+    })
+</script>
