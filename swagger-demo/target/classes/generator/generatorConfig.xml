@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--运行方式：maven运行命令 mybatis-generator:generate -e -->
+    <!--数据库驱动：选择你本地硬盘上面的数据库驱动-->
+    <properties resource="generator/generator.properties"/>
+    <classPathEntry location="${classPathEntry}"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--数据库连接url，用户名，密码 注意这里多了一个>-->
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/${db}?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"
+                userId="${userId}"
+                password="${password}">
+            <!--不加这一句生成所有库的所有表了-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        <!--mybatis映射默认的地址为org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl-->
+        <javaTypeResolver>
+            <!--此属性用于指定 MyBatis 生成器是否应强制使用 java.math.BigDecimal
+            用于 DECIMAL 和 NUMERIC 字段,而不是尽可能替换积分类型。true:始终和数据库类型的一样-->
+            <!--useJSR310Types	此属性用于指定 MyBatis 生成器是否应强制使用 JSR-310 数据类型用于 DATE、
+            TIME 和 TIMESTAMP 字段,而不是使用 java.util.Date。如果为 true,则类型将解析如下:-->
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="${pojoTargetPackage}" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成mapper.xml映射文件名的包名和位置-->
+        <sqlMapGenerator targetPackage="${mapperTargetPackage}" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成Dao的包名和位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="${daoTargetPackage}" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--要生成的表 tableName是数据库中的表名 或视图 schema是数据库的名称-->
+        <table tableName="%" schema="${db}"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"
+               enableInsert="false"
+               enableUpdateByPrimaryKey="false">
+        </table>
+        <!--<table tableName="t_province" enableCountByExample="true"-->
+               <!--enableUpdateByExample="true" enableDeleteByExample="true"-->
+               <!--enableSelectByExample="true" selectByExampleQueryId="true" />-->
+        <!--<table tableName="tweet" domainObjectName="Tweet" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+
+    </context>
+</generatorConfiguration>

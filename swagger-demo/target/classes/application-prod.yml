@@ -1,0 +1,10 @@
+## Prod Setting
+spring:
+  profiles: prod
+
+server:
+  port: 8083
+
+app:
+  title:
+    name: prod name
