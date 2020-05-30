@@ -1,5 +1,6 @@
 package com.springboot.demo.swaggerdemo.controller;
 
+import com.springboot.demo.swaggerdemo.annotation.Mycomponent;
 import com.springboot.demo.swaggerdemo.context.UserContext;
 import com.springboot.demo.swaggerdemo.service.UserService;
 import com.springboot.demo.swaggerdemo.vo.ResultData;
@@ -71,6 +72,7 @@ public class TestController {
      *    response：抛出异常的类
      */
 
+    @Mycomponent(value = "haha") // 可以在这里加
     @RequestMapping(value = "/{phone}/{nickName}",method = RequestMethod.PUT)
     @ResponseBody
     // 表示一个http请求的操作
