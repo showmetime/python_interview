@@ -1,436 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="668143a2-c6b9-412b-9dc9-d74e935ddfcb" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/swagger-demo/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="668143a2-c6b9-412b-9dc9-d74e935ddfcb" name="Default" comment="终于明白尼玛得自定义注解了">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/XXL-JOB-English-Documentation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/XXL-JOB官方文档.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/XXL-JOB架构图.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/db/tables_xxl_job.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/LongConstraintValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/Mobile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/MobileConstraintValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/webService/WebServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/xxljob/XxlJobConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/jobhandler/BeanXxlJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/jobhandler/SampleXxlJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/SellerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/SellerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/WebServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/util/SpringContextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/xxlJob.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/ComponentAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/ComponentAnnotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/MyComponentAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/MyComponentAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/Mycomponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/Mycomponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbCities.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbCities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbSellerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbSellerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbSellerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbSellerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/swagger-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parent_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/application-test.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/config/swaggerConfig/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/context/UserContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAreas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbCities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContentCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbFreightTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoodsDesc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItemCat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbPayLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbProvinces.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillGoods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecificationOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbTypeTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAddressMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAreasMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbBrandMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbCitiesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbFreightTemplateMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsDescMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemCatMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbPayLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbProvincesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillGoodsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillOrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSellerMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationOptionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbTypeTemplateMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/vo/ResultData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/generator/generator.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/generator/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbAreasMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbCitiesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbContentCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbContentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbFreightTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbGoodsDescMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbGoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbItemCatMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbOrderItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbOrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbPayLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbProvincesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSeckillGoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSeckillOrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSellerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSpecificationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSpecificationOptionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbTypeTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/static/hehe.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="springboot-demo" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/context/UserContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwaggerDemoApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logback-spring.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/logback-spring.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1472">
-              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelAttribute.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TbUserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TbUserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/vo/ResultData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/resources/static/hehe.html" />
-        <option value="$PROJECT_DIR$/swagger-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/swaggerConfig/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/vo/ResultData.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/UserService.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/context/UserContext.java" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbUserMapper.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\7-19-maven\repository" />
-        <option name="mavenHome" value="D:/7-19-maven/apache-maven-3.5.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../7-19-maven/apache-maven-3.5.0" />
         <option name="userSettingsFile" value="D:\7-19-maven\apache-maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="springboot.demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="springboot.demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="98" />
-    <option name="y" value="28" />
-    <option name="width" value="1775" />
-    <option name="height" value="834" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerConfig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swaggerdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1c8IXRy2CLexB0Okr2iOuJWKlDE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue_demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.springboot.demo.swaggerdemo.annotation" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springboot.demo.swaggerdemo.jobhandler" />
       <recent name="com.springboot.demo.swaggerdemo.config.swaggerConfig" />
       <recent name="com.springboot.demo.swaggerdemo.vo" />
       <recent name="com.springboot.demo.swaggerdemo.controller" />
       <recent name="com.springboot.demo.swaggerdemo.context" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\parent_demo" />
       <recent name="D:\project\parent_demo\swagger-demo\src\main\resources" />
       <recent name="D:\project\parent_demo\swagger-demo\src\main\java\com\springboot\demo\swaggerdemo" />
     </key>
   </component>
   <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SwaggerDemoApplication">
-    <configuration name="SwaggerDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.springboot.demo.swaggerdemo.SwaggerDemoApplication" />
+  <component name="RunManager" selected="Spring Boot.SwaggerDemoApplication">
+    <configuration name="ComponentAnnotationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.demo.swaggerdemo.annotation.ComponentAnnotationTest" />
       <module name="swagger-demo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.springboot.demo.swaggerdemo.*" />
+          <option name="PATTERN" value="com.springboot.demo.swaggerdemo.annotation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMoney1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.demo.swaggerdemo.annotation.TestMoney1" />
+      <module name="swagger-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.demo.swaggerdemo.annotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.demo.swaggerdemo.serviceImpl.WebServiceTest" />
+      <module name="swagger-demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.demo.swaggerdemo.serviceImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SwaggerDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="swagger-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.springboot.demo.swaggerdemo.SwaggerDemoApplication" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XxlJobAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xxl-job-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxl.job.admin.XxlJobAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ComponentAnnotationTest" />
+      <item itemvalue="Application.TestMoney1" />
+      <item itemvalue="Application.WebServiceTest" />
       <item itemvalue="Spring Boot.SwaggerDemoApplication" />
-      <item itemvalue="Application.SwaggerDemoApplication" />
+      <item itemvalue="Spring Boot.XxlJobAdminApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SwaggerDemoApplication" />
+        <item itemvalue="Application.WebServiceTest" />
+        <item itemvalue="Application.TestMoney1" />
+        <item itemvalue="Application.ComponentAnnotationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -446,335 +326,217 @@
       <updated>1589624067079</updated>
       <workItem from="1589624071413" duration="2762000" />
       <workItem from="1589639999433" duration="9513000" />
-      <workItem from="1589678901826" duration="2587000" />
+      <workItem from="1589678901826" duration="2732000" />
+      <workItem from="1589903872707" duration="60000" />
+      <workItem from="1589903956954" duration="285000" />
+      <workItem from="1589904256127" duration="88000" />
+      <workItem from="1589977691961" duration="1606000" />
+      <workItem from="1590803317859" duration="16259000" />
+      <workItem from="1590824336326" duration="3626000" />
+      <workItem from="1590853077826" duration="645000" />
+      <workItem from="1590853743854" duration="14000" />
+      <workItem from="1590855412568" duration="26000" />
+      <workItem from="1591363878504" duration="563000" />
+      <workItem from="1591364589643" duration="59000" />
+      <workItem from="1591364671516" duration="39000" />
+      <workItem from="1591365018151" duration="112000" />
+      <workItem from="1591365139521" duration="28000" />
+      <workItem from="1591405483565" duration="1232000" />
+      <workItem from="1591407377875" duration="12000" />
+      <workItem from="1591419891930" duration="10501000" />
+      <workItem from="1591497760065" duration="327000" />
+      <workItem from="1591592049727" duration="1565000" />
+      <workItem from="1591710968337" duration="2596000" />
+      <workItem from="1591713668135" duration="6697000" />
+      <workItem from="1591797390993" duration="42000" />
+      <workItem from="1591797896803" duration="5769000" />
     </task>
+    <task id="LOCAL-00001" summary="终于明白尼玛得自定义注解了">
+      <created>1590816392383</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590816392383</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14862000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="79" y="23" width="1420" height="667" extended-state="1" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.11306901" side_tool="true" weight="0.33878887" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.14904553" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32925472" />
-      <window_info id="Structure" order="1" sideWeight="0.18248175" side_tool="true" visible="true" weight="0.2187959" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24916574" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49865952" weight="0.7161017" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.76605994" weight="0.16057234" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.47319034" weight="0.073446326" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49888766" weight="0.32886723" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" sideWeight="0.8485011" weight="0.43402225" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.886931" visible="true" weight="0.23463687" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.29066986" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49944383" weight="0.32886723" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81751823" visible="true" weight="0.2187959" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info id="Web" order="7" sideWeight="0.27926657" side_tool="true" weight="0.38097885" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="5" sideWeight="0.6705069" side_tool="true" weight="0.2298091" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.21045296" />
-      <window_info anchor="bottom" id="Application Servers" order="2" sideWeight="0.4986631" weight="0.0384" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbAddressMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="70" column="66" lean-forward="true" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/vo/ResultData.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/static/hehe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/generator/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.2.RELEASE/spring-core-5.2.2.RELEASE.jar!/org/springframework/core/io/ClassPathResource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/swaggerConfig/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbCitiesMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbGoodsMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbItemCatMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbOrderItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbGoodsDescMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbSpecificationOptionMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbSpecificationMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbAddressMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbTypeTemplateMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbTypeTemplate.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbSeller.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbItemCat.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbAddress.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbItem.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbOrderItem.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbContent.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbContentCategory.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbSeckillGoods.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbAreas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.2.RELEASE/spring-core-5.2.2.RELEASE.jar!/org/springframework/core/io/ClassPathResource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbAddressMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/static/hehe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="6" selection-start-line="7" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/entity/TbUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14523">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/java/src.zip!/java/time/LocalDateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="133" selection-start-line="132" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/application-test.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/generator/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/generator/generator.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="35" selection-start-line="34" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/swaggerConfig/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/swagger-demo.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/context/UserContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/vo/ResultData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="终于明白尼玛得自定义注解了" />
+    <option name="LAST_COMMIT_MESSAGE" value="终于明白尼玛得自定义注解了" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="772" y="247" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1590810332909">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="772" y="247" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1590810332909" />
+    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590810621167">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590810621167" />
+    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1591802700554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591802700554" />
+    <state x="525" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589903984282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="525" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1589903984282" />
+    <state x="832" y="295" width="545" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591803183929">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="832" y="295" width="545" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1591803183929" />
+    <state x="165" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590822308589">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="165" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1590822308589" />
+    <state x="591" y="210" key="FileChooserDialogImpl" timestamp="1591715730059">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="591" y="210" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591715730059" />
+    <state width="1094" height="125" key="GridCell.Tab.0.bottom" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.0.center" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.0.left" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.0.right" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.1.bottom" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.1.center" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.1.left" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.1.right" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.2.bottom" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.2.center" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.2.left" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state width="1094" height="125" key="GridCell.Tab.2.right" timestamp="1591803660325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1094" height="125" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591803660325" />
+    <state x="223" y="91" key="SettingsEditor" timestamp="1591592357171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="91" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591592357171" />
+    <state x="375" y="158" key="Vcs.Push.Dialog.v2" timestamp="1590827612050">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="375" y="158" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590827612050" />
+    <state x="520" y="122" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590817652801">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="122" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1590817652801" />
+    <state x="441" y="199" key="git4idea.merge.GitPullDialog" timestamp="1590824471993">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="441" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590824471993" />
+    <state x="274" y="13" width="1194" height="779" key="new project wizard" timestamp="1591592654592">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="274" y="13" width="1194" height="779" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1591592654592" />
+    <state x="374" y="163" key="run.anything.popup" timestamp="1590853430290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="374" y="163" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590853430290" />
+    <state x="509" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1591799274955">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="509" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591799274955" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/ComponentAnnotationTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

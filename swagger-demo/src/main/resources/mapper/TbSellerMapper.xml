@@ -54,4 +54,8 @@
     from tb_seller
     where seller_id = #{sellerId,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectNameBySellerId" parameterType="java.lang.String" resultType="java.lang.String">
+    select name from tb_seller where seller_id = #{sellerId}
+  </select>
 </mapper>

@@ -1,7 +1,11 @@
 package com.springboot.demo.swaggerdemo.entity;
 
+import com.springboot.demo.swaggerdemo.annotation.Mobile;
+import lombok.ToString;
+
 import java.util.Date;
 
+@ToString
 public class TbSeller {
     /**
      *

@@ -4,7 +4,7 @@ package com.springboot.demo.swaggerdemo.annotation;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class ComponentAnnotationTest {
     public static void main(String[] args) {
         // 这个也留着吧 现在开始主要是进行注解形式的用法

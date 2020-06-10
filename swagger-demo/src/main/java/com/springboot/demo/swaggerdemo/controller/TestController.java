@@ -2,16 +2,20 @@ package com.springboot.demo.swaggerdemo.controller;
 
 import com.springboot.demo.swaggerdemo.annotation.Mycomponent;
 import com.springboot.demo.swaggerdemo.context.UserContext;
+import com.springboot.demo.swaggerdemo.entity.TbCities;
 import com.springboot.demo.swaggerdemo.service.UserService;
 import com.springboot.demo.swaggerdemo.vo.ResultData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -31,6 +35,7 @@ import java.util.Date;
  * tags="说明该类的作用，可以在UI界面上看到的注解"
  * value="该参数没什么意义，在UI界面上也看到，所以不需要配置
  * */
+@Slf4j
 @Controller
 @RequestMapping("v1/product")
 @Api(value = "docController",tags = {"restful api示例"})
@@ -79,6 +84,7 @@ public class TestController {
     @ApiOperation(value = "修改当前用户好了",httpMethod = "PUT",produces = "application/json")
     @ApiImplicitParams({@ApiImplicitParam(name = "phone",value = "phone",required = true,paramType = "path"),
             @ApiImplicitParam(name = "nickName",value = "其他的在想",required = false,paramType = "path")})
+    // 还可以在update里面添加@ApiIgore 表示生成的文档没有这个方法的接口
     public ResultData update(@PathVariable("phone") String phone,
                              @PathVariable("nickName") String nickName,
                              @ModelAttribute   UserContext context){
@@ -113,6 +119,20 @@ public class TestController {
     /**
      *  @ApiModelProperty：用在属性上，描述响应类的属性
      */
+    @ApiOperation(value = "麻辣个二逼的",httpMethod = "POST",produces = "application/json")
+    @RequestMapping(value = "/exist", method = RequestMethod.POST)
+    @ResponseBody
+    public ResultData validatorDemo(@Valid @RequestBody TbCities cities, BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            log.error("出错了 ==> " + bindingResult.getFieldError().getDefaultMessage());
+            bindingResult.getAllErrors().stream().forEach(t->{
+                log.error("所有的错误有：",t.getDefaultMessage());
+            });
+
+            return ResultData.RESULT_ERROR;
+        }
+        return ResultData.RESULT_SUCCESS;
+    }
 
 
 }

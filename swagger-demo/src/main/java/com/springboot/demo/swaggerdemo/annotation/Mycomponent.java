@@ -1,9 +1,6 @@
 package com.springboot.demo.swaggerdemo.annotation;
 
 import com.springboot.demo.swaggerdemo.context.UserContext;
-import com.sun.org.apache.xml.internal.dtm.ref.ExtendedType;
-import org.springframework.stereotype.Component;
-
 import java.lang.annotation.*;
 import java.util.List;
 

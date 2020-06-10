@@ -10,4 +10,6 @@ public interface TbSellerMapper {
      * @mbg.generated Sat May 16 14:11:45 CST 2020
      */
     TbSeller selectByPrimaryKey(String sellerId);
+
+    String selectNameBySellerId(String sellerId);
 }
