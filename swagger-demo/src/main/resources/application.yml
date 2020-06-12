@@ -43,13 +43,14 @@ spring:
 #    maxOpenPreparedStatements: -1
   application:
     name: swagger-demo
+
 mybatis:
   #mapper.xml包生成地址
   mapper-locations: classpath:mapper/*.xml
   # pojo生成包地址
   type-aliases-package: com.springboot.demo.swaggerdemo.entity
 server:
-  port: 8081 #注意 service改成了8081了
+  port: 8080 #注意 service改成了8081了
 resources:
   # log文件写入地址
   logdir: logs/

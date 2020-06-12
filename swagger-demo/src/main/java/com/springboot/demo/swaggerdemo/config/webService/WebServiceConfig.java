@@ -5,10 +5,14 @@ import org.apache.cxf.Bus;
 // 不是它import org.apache.cxf.endpoint.EndpointImpl;
 import org.apache.cxf.jaxws.EndpointImpl;
 import org.apache.cxf.transport.servlet.CXFServlet;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.xml.ws.Endpoint;
 
@@ -35,6 +39,26 @@ public class WebServiceConfig {
     @Bean
     public ServletRegistrationBean dispatcherServlet() {
         return new ServletRegistrationBean(new CXFServlet(), "/soap/*");
+    }
+
+    /**
+     * @Description: webservice发布导致其它接口访问不到 需要手动配置ServletRegistrationBean
+     * @Author: ASUS
+     * @Date: 2020/6/12 22:17
+     * @Params: TODO 他妈的 还有一种就是将endpoint进行xml配置 javashop也是这种
+    * @Return:
+     */
+    @Bean
+    public ServletRegistrationBean resetServlet(){
+        // 注解扫描上下文
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
+        // 项目包名
+        applicationContext.scan("com.springboot.demo.swaggerdemo.controller");
+        DispatcherServlet dispatcherServlet = new DispatcherServlet(applicationContext);
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(dispatcherServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/*");
+        return registrationBean;
     }
 
 

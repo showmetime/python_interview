@@ -1,6 +1,8 @@
 spring:
-#  profiles:
-#   active: dev
+  #profiles:
+    #include:
+    #  xxlJob.properties #这个居然不行 待会再弄
+    #   active: dev
   datasource:
     # 如果存在多个数据源，监控的时候可以通过名字来区分开来
     name: mysql
@@ -41,13 +43,14 @@ spring:
 #    maxOpenPreparedStatements: -1
   application:
     name: swagger-demo
+
 mybatis:
   #mapper.xml包生成地址
   mapper-locations: classpath:mapper/*.xml
   # pojo生成包地址
   type-aliases-package: com.springboot.demo.swaggerdemo.entity
 server:
-  port: 8080
+  port: 8080 #注意 service改成了8081了
 resources:
   # log文件写入地址
   logdir: logs/
@@ -56,4 +59,40 @@ resources:
   #日志打印的基础扫描包
   basepackage: com.springboot.demo.swaggerdemo
 
+# 对这个包下面的mapper的sql语句 显示出来
+logging:
+  level:
+    com.springboot.demo.swaggerdemo.mapper:
+      debug
+  config: classpath:logback-spring.xml
 
+
+
+# xxljob的配置
+# log config
+# logging.config=classpath:logback.xml
+### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+###调度中心的部署地址。若调度中心采用集群部署，存在多个地址，则用逗号分隔。
+# 执行器将会使用该地址进行”执行器心跳注册”和”任务结果回调”。
+
+# 不通过propetiesSource而是通过 从yml中导入加载 spring:profiles:include:aaa,bbb,ccc
+
+#xxl:
+#  job:
+#    admin:
+#      addresses: "@xxl.job.admin.addresses@"
+#
+#    accessToken: ### xxl-job, access token 执行器的通信令牌，非空时启用。
+#    executor:
+#      appname: swagger-demo  #执行器的应用名称，它是执行器心跳注册的分组依据。
+#      address: # 可以指定地址 否则就是ip:port
+#      ip: #执行器的IP地址，用于”调度中心请求并触发任务”和”执行器注册”
+#      port: 9999
+#      logpath: logs/jobhandler #行器输出的日志文件的存储路径，需要拥有该路径的读写权限。
+#      logretentiondays: 60 #日志保留的天数
+
+## 调度线程池最大线程配置【必填】 现在有默认值了
+#xxl.job.triggerpool.fast.max=200
+#xxl.job.triggerpool.slow.max=100
+#繁体 and "en"/英文；
+#xxl.job.i18n=zh_CN
