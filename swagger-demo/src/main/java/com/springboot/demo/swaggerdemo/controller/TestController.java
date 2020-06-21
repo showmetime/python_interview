@@ -1,10 +1,10 @@
 package com.springboot.demo.swaggerdemo.controller;
 
+import com.springboot.common.context.UserContext;
+import com.springboot.common.vo.ResultData;
 import com.springboot.demo.swaggerdemo.annotation.Mycomponent;
-import com.springboot.demo.swaggerdemo.context.UserContext;
 import com.springboot.demo.swaggerdemo.entity.TbCities;
 import com.springboot.demo.swaggerdemo.service.UserService;
-import com.springboot.demo.swaggerdemo.vo.ResultData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 
@@ -78,7 +77,7 @@ public class TestController {
      */
 
     @Mycomponent(value = "haha") // 可以在这里加
-    @RequestMapping(value = "/{phone}/{nickName}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/{phone}/{nickName}",method = RequestMethod.POST)
     @ResponseBody
     // 表示一个http请求的操作
     @ApiOperation(value = "修改当前用户好了",httpMethod = "PUT",produces = "application/json")
@@ -87,10 +86,10 @@ public class TestController {
     // 还可以在update里面添加@ApiIgore 表示生成的文档没有这个方法的接口
     public ResultData update(@PathVariable("phone") String phone,
                              @PathVariable("nickName") String nickName,
-                             @ModelAttribute   UserContext context){
+                             @RequestBody UserContext context){
         // 这个只是new了一个对象 值需要我们指定
         System.out.printf("修改用户id及相关信息 ==>%s,%s",phone,nickName);
-        if (context.getPhone() != null && !phone.equals(context.getPhone())){
+        if (context.getPhone() == null || !phone.equals(context.getPhone())){
             System.out.println("改用户名不存在");
             return ResultData.RESULT_ERROR;
         }
@@ -98,7 +97,7 @@ public class TestController {
             context.setNickName(nickName);
         }
         int status = userService.updateUser(context);
-        System.out.println();
+        System.out.println(status + "*************************");
         if (status == 0){
             DateFormat format1 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             String formatDate = format1.format(new Date());

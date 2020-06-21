@@ -3,13 +3,15 @@ package com.springboot.demo.swaggerdemo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 
 /**
  * @author:ASUS
  * @createTime:2020/5/16 18:21
  * @describle:
  */
+@EnableDiscoveryClient
 @MapperScan("com.springboot.demo.swaggerdemo.mapper")
 @SpringBootApplication
 public class SwaggerDemoApplication {

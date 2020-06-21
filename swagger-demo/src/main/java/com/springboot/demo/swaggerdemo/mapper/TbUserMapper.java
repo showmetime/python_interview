@@ -1,6 +1,6 @@
 package com.springboot.demo.swaggerdemo.mapper;
 
-import com.springboot.demo.swaggerdemo.context.UserContext;
+import com.springboot.common.context.UserContext;
 import com.springboot.demo.swaggerdemo.entity.TbUser;
 
 public interface TbUserMapper {

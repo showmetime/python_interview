@@ -21,72 +21,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="668143a2-c6b9-412b-9dc9-d74e935ddfcb" name="Default" comment="终于明白尼玛得自定义注解了">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/db/tables_xxl_job.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/jobhandler/BeanXxlJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-api/src/main/java/com/spingboot/swaggerdemo/api/SwaggerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-api/src/main/java/com/spingboot/swaggerdemo/api/impl/SwaggerClientFallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger-api/swagger-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/XXL-JOB-English-Documentation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/XXL-JOB官方文档.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/XXL-JOB架构图.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/tables_xxl_job.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/MyComponentAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/MyComponentAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/Mycomponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/Mycomponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/webService/WebServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/config/webService/WebServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/context/UserContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/DemoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/SellerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/SellerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/SellerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/SellerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/WebServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/serviceImpl/WebServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/vo/ResultData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/swagger-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parent_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/src/main/resources/mapper/TbUserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/SwaggerDemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/context/UserContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/context/UserContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/context/UserContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAreas.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbAreas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbBrand.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbBrand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbCities.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbCities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContentCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbContentCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbFreightTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbFreightTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoodsDesc.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbGoodsDesc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItemCat.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbItemCat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbOrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbPayLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbPayLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbProvinces.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbProvinces.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeckillOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeller.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSeller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecification.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecificationOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbSpecificationOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbTypeTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbTypeTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/entity/TbUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAddressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAddressMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAreasMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbAreasMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbBrandMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbBrandMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbCitiesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbCitiesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentCategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentCategoryMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbContentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbFreightTemplateMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbFreightTemplateMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsDescMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsDescMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbGoodsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemCatMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemCatMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbItemMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderItemMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderItemMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbOrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbPayLogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbPayLogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbProvincesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbProvincesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillGoodsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSeckillOrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSellerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSellerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationOptionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbSpecificationOptionMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbTypeTemplateMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbTypeTemplateMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/mapper/TbUserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/vo/ResultData.class" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/vo/ResultData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSellerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbSellerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/com/springboot/demo/swaggerdemo/vo/ResultData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo/target/classes/mapper/TbUserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +81,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\7-19-maven\repository" />
+        <option name="localRepository" value="D:\7-19-maven\repository_tensquare" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../7-19-maven/apache-maven-3.5.0" />
         <option name="userSettingsFile" value="D:\7-19-maven\apache-maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -130,8 +102,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="15" />
-    <property name="RequestMappingsPanelWidth1" value="15" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -140,14 +112,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tensquare_parent" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\project\parent_demo\swagger-demo\src\main\resources" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.springboot.demo.swaggerdemo.annotation" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\parent_demo" />
+      <recent name="D:\project\parent_demo\swagger-demo\src\main\resources" />
+      <recent name="D:\project\parent_demo\swagger-demo\src\main\java\com\springboot\demo\swaggerdemo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.springboot.demo.swaggerdemo.jobhandler" />
@@ -156,10 +130,8 @@
       <recent name="com.springboot.demo.swaggerdemo.controller" />
       <recent name="com.springboot.demo.swaggerdemo.context" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\parent_demo" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\parent_demo\swagger-demo\src\main\resources" />
-      <recent name="D:\project\parent_demo\swagger-demo\src\main\java\com\springboot\demo\swaggerdemo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,8 +201,6 @@
       <module name="swagger-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.springboot.demo.swaggerdemo.SwaggerDemoApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -276,9 +246,9 @@
       <item itemvalue="Application.ComponentAnnotationTest" />
       <item itemvalue="Application.TestMoney1" />
       <item itemvalue="Application.WebServiceTest" />
+      <item itemvalue="Docker.Docker Image" />
       <item itemvalue="Spring Boot.SwaggerDemoApplication" />
       <item itemvalue="Spring Boot.XxlJobAdminApplication" />
-      <item itemvalue="Docker.Docker Image" />
     </list>
     <recent_temporary>
       <list>
@@ -325,7 +295,10 @@
       <workItem from="1591713668135" duration="6697000" />
       <workItem from="1591797390993" duration="42000" />
       <workItem from="1591797896803" duration="5769000" />
-      <workItem from="1591967084353" duration="10049000" />
+      <workItem from="1591967084353" duration="10301000" />
+      <workItem from="1592490725219" duration="143000" />
+      <workItem from="1592670107309" duration="7206000" />
+      <workItem from="1592705829657" duration="20874000" />
     </task>
     <task id="LOCAL-00001" summary="终于明白尼玛得自定义注解了">
       <created>1590816392383</created>
@@ -334,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590816392383</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="终于明白尼玛得自定义注解了">
+      <created>1591978117946</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591978117946</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,14 +361,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="772" y="247" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1590810332909" />
-    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590810621167">
+    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592712797544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590810621167" />
-    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1591802700554">
+    <state x="386" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592712797544" />
+    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1592674673176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591802700554" />
+    <state x="906" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592674673176" />
     <state x="525" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589903984282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -401,70 +381,82 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="165" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1590822308589" />
-    <state x="591" y="210" key="FileChooserDialogImpl" timestamp="1591976086800">
+    <state x="863" y="496" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592676994717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="591" y="210" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591976086800" />
-    <state width="753" height="273" key="GridCell.Tab.0.bottom" timestamp="1591977004704">
+    <state x="863" y="496" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1592676994717" />
+    <state x="591" y="210" key="FileChooserDialogImpl" timestamp="1592705850936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.0.center" timestamp="1591977004704">
+    <state x="591" y="210" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592705850936" />
+    <state width="1111" height="471" key="GridCell.Tab.0.bottom" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.0.left" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.0.center" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.0.right" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.0.left" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.1.bottom" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.0.right" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.1.center" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.1.bottom" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.1.left" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.1.center" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="753" height="273" key="GridCell.Tab.1.right" timestamp="1591977004704">
+    <state width="1111" height="471" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.1.left" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="753" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591977004704" />
-    <state width="1094" height="125" key="GridCell.Tab.2.bottom" timestamp="1591804119814">
+    <state width="1111" height="471" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1111" height="471" key="GridCell.Tab.1.right" timestamp="1592726688876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1094" height="125" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591804119814" />
-    <state width="1094" height="125" key="GridCell.Tab.2.center" timestamp="1591804119814">
+    <state width="1111" height="471" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592726688876" />
+    <state width="1124" height="304" key="GridCell.Tab.2.bottom" timestamp="1592712874667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1094" height="125" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591804119814" />
-    <state width="1094" height="125" key="GridCell.Tab.2.left" timestamp="1591804119814">
+    <state width="1124" height="304" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592712874667" />
+    <state width="1124" height="304" key="GridCell.Tab.2.center" timestamp="1592712874667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1094" height="125" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591804119814" />
-    <state width="1094" height="125" key="GridCell.Tab.2.right" timestamp="1591804119814">
+    <state width="1124" height="304" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1592712874667" />
+    <state width="1124" height="304" key="GridCell.Tab.2.left" timestamp="1592712874667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1094" height="125" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591804119814" />
-    <state x="451" y="9" width="996" height="815" key="SettingsEditor" timestamp="1591976291551">
+    <state width="1124" height="304" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1592712874667" />
+    <state width="1124" height="304" key="GridCell.Tab.2.right" timestamp="1592712874667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="451" y="9" width="996" height="815" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591976291551" />
-    <state x="375" y="158" key="Vcs.Push.Dialog.v2" timestamp="1591804078923">
+    <state width="1124" height="304" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1592712874667" />
+    <state x="451" y="9" width="996" height="815" key="SettingsEditor" timestamp="1592676761110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="375" y="158" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591804078923" />
+    <state x="451" y="9" width="996" height="815" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592676761110" />
+    <state x="375" y="158" key="Vcs.Push.Dialog.v2" timestamp="1591978141962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="375" y="158" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591978141962" />
     <state x="1051" y="385" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1591976768836">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="1051" y="385" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.1536.824@0.0.1536.824" timestamp="1591976768836" />
+    <state x="258" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592709376523">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="258" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1592709376523" />
+    <state x="516" y="151" width="602" height="536" key="find.popup" timestamp="1592711214070">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="516" y="151" width="602" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1592711214070" />
     <state x="520" y="122" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590817652801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -473,10 +465,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="441" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1590824471993" />
-    <state x="274" y="13" width="1194" height="779" key="new project wizard" timestamp="1591592654592">
+    <state x="231" y="25" width="1194" height="779" key="new project wizard" timestamp="1592672516878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="274" y="13" width="1194" height="779" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1591592654592" />
+    <state x="231" y="25" width="1194" height="779" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1592672516878" />
     <state x="374" y="163" key="run.anything.popup" timestamp="1590853430290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -489,35 +481,75 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/annotation/ComponentAnnotationTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
-          <line>88</line>
+          <line>87</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/boot/spring-boot/2.1.1.RELEASE/spring-boot-2.1.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class</url>
+          <line>766</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/boot/spring-boot/2.1.1.RELEASE/spring-boot-2.1.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class</url>
+          <line>770</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/boot/spring-boot/2.1.1.RELEASE/spring-boot-2.1.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class</url>
+          <line>136</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>364</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>1173</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>1171</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class</url>
+          <line>1345</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../../7-19-maven/repository_tensquare/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class</url>
+          <line>916</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/swagger-demo/src/main/java/com/springboot/demo/swaggerdemo/controller/TestController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

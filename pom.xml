@@ -10,13 +10,14 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>swagger-demo</module>
+        <module>swagger-api</module>
     </modules>
 
     <!--父依赖-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <version>2.1.1.RELEASE</version>
     </parent>
 
     <properties>
@@ -25,13 +26,26 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <!--引入父依赖 这个为什么是dependencyManagement-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <!--这个import是实现继承这个dependencies依赖 本来他是继承的父依赖-->
+                <!--2、将dependency分类，每一类建立单独的pom文件
+                    3、在需要使用到这些依赖的子model中，使用dependencyManagement管理依赖，并import scope依赖
+                    4、注意：scope=import只能用在dependencyManagement里面,且仅用于type=pom的dependency-->
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
     <!--艹尼玛的 真好了         -->
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-            <version>3.2.4</version>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.codehaus.woodstox/woodstox-core-asl -->
 <!--        <dependency>-->
 <!--            <groupId>org.codehaus.woodstox</groupId>-->

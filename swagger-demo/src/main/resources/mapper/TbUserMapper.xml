@@ -42,7 +42,7 @@
   </sql>
 
   <!--修改改用户-->
-  <update id="updateUser" parameterType="com.springboot.demo.swaggerdemo.context.UserContext" >
+  <update id="updateUser" parameterType="com.springboot.common.context.UserContext" >
      update tb_user
      <trim prefix="set" suffixOverrides=",">
        <if test="userName != null and userName != ''">

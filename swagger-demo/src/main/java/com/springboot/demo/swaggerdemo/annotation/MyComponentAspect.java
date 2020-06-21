@@ -1,6 +1,6 @@
 package com.springboot.demo.swaggerdemo.annotation;
 
-import com.springboot.demo.swaggerdemo.context.UserContext;
+import com.springboot.common.context.UserContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;

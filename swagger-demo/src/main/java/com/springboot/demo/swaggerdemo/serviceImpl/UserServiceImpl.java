@@ -1,6 +1,7 @@
 package com.springboot.demo.swaggerdemo.serviceImpl;
 
-import com.springboot.demo.swaggerdemo.context.UserContext;
+
+import com.springboot.common.context.UserContext;
 import com.springboot.demo.swaggerdemo.mapper.TbUserMapper;
 import com.springboot.demo.swaggerdemo.service.UserService;
 import lombok.RequiredArgsConstructor;

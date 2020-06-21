@@ -1,6 +1,8 @@
 package com.springboot.demo.swaggerdemo.annotation;
 
-import com.springboot.demo.swaggerdemo.context.UserContext;
+
+import com.springboot.common.context.UserContext;
+
 import java.lang.annotation.*;
 import java.util.List;
 

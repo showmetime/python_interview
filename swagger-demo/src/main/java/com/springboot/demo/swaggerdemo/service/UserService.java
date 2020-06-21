@@ -1,6 +1,7 @@
 package com.springboot.demo.swaggerdemo.service;
 
-import com.springboot.demo.swaggerdemo.context.UserContext;
+
+import com.springboot.common.context.UserContext;
 
 /**
  * @author:ASUS
